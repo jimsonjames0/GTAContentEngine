@@ -1,0 +1,15 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+
+data/trends/*
+data/ideas/*
+data/rejected/*
+data/content_briefs/*
+
+media/raw/*
+media/voice/*
+media/final/*
+
+database/*.db
