@@ -1,0 +1,23 @@
+{
+  "name": "discovery",
+  "length": "20-40",
+  "structure": [
+    "hook",
+    "show_discovery",
+    "explain",
+    "impact"
+  ],
+  "hook_styles": [
+    "Nobody is talking about this...",
+    "Look at this GTA VI detail...",
+    "I just found something interesting...",
+    "This small detail actually matters..."
+  ],
+  "editing_style": {
+    "pace": "fast",
+    "caption_style": "highlighted",
+    "visual_changes": "frequent",
+    "zoom_usage": "heavy",
+    "music": "energetic"
+  }
+}

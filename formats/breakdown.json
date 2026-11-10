@@ -1,0 +1,23 @@
+{
+	"name": "breakdown",
+	"length": "30-45",
+	"structure": [
+		"hook",
+		"show_evidence",
+		"explain",
+		"payoff"
+	],
+	"hook_styles": [
+		"Nobody noticed this...",
+		"Look closely at this...",
+		"Rockstar hid this in plain sight...",
+		"This GTA VI detail is actually huge..."
+	],
+	"editing_style": {
+		"pace": "fast",
+		"caption_style": "bold_emphasized",
+		"visual-changes": "frequent",
+		"zoom_usage": "moderate",
+		"music": "subtle_background"
+	}
+}

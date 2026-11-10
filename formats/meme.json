@@ -1,0 +1,21 @@
+{
+  "name": "meme",
+  "length": "10-25",
+  "structure": [
+    "setup",
+    "punchline"
+  ],
+  "hook_styles": [
+    "Bro what is Jason doing...",
+    "Lucia would never let this happen...",
+    "GTA VI players be like...",
+    "This is so GTA VI coded..."
+  ],
+  "editing_style": {
+    "pace": "very_fast",
+    "caption_style": "comic",
+    "visual_changes": "rapid",
+    "zoom_usage": "chaotic",
+    "music": "funny_or_trending"
+  }
+}

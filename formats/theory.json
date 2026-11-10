@@ -1,0 +1,23 @@
+{
+  "name": "theory",
+  "length": "30-60",
+  "structure": [
+    "hook",
+    "evidence",
+    "theory",
+    "question"
+  ],
+  "hook_styles": [
+    "I think Rockstar just revealed something huge...",
+    "This GTA VI detail might change everything...",
+    "Hear me out...",
+    "What if this means something bigger?"
+  ],
+  "editing_style": {
+    "pace": "medium",
+    "caption_style": "clean_emphasized",
+    "visual_changes": "moderate",
+    "zoom_usage": "light",
+    "music": "mysterious_or_minimal"
+  }
+}

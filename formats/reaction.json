@@ -1,0 +1,23 @@
+{
+  "name": "reaction",
+  "length": "20-35",
+  "structure": [
+    "hook",
+    "clip",
+    "reaction",
+    "commentary"
+  ],
+  "hook_styles": [
+    "My reaction to this GTA VI moment...",
+    "This part caught me off guard...",
+    "I didn’t expect this...",
+    "This is actually insane..."
+  ],
+  "editing_style": {
+    "pace": "medium_fast",
+    "caption_style": "reaction_style",
+    "visual_changes": "moderate",
+    "zoom_usage": "emotional_focus",
+    "music": "light_or_none"
+  }
+}

@@ -1,0 +1,21 @@
+# Autonomous Pipeline Rules
+
+1. Environment:
+   - Always run commands inside the virtual environment: `source .venv/bin/activate`.
+   - Never install system-wide packages.
+   - Use Python 3.11+.
+
+2. Ground Truth & Scope:
+   - Use `PROJECT_OVERVIEW.md` as the single source of truth.
+   - Respect Day boundaries: Do NOT skip ahead to video publishing, databases, or UI agents.
+   - Strictly adhere to data contracts:
+     - Trends -> `data/trends/`
+     - Ideas -> `data/ideas/`
+     - Content Briefs -> `data/content_briefs/`
+     - Formats -> read from `formats/*.json`
+
+3. Autonomous Execution Loop:
+   - When given a task, create the implementation file.
+   - Create and run the corresponding test script in the terminal.
+   - If tests fail (e.g., HTTP errors, import errors, schema mismatches), inspect the stack trace, patch the code, and re-test until it exits with code 0.
+   - Verify output files exist and contain valid JSON before marking a step complete.
