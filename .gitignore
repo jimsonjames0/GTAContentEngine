@@ -1,15 +1,45 @@
+# Virtual environment & Python cache
 .venv/
-.env
+venv/
 __pycache__/
-*.pyc
+*.py[cod]
 
-data/trends/*
-data/ideas/*
-data/rejected/*
-data/content_briefs/*
+# Secrets & Environment files
+.env
+.env.*
+*.pem
+*credential*.json
+*secret*.json
 
+# Media binaries & temporary renders (keep directory structure via .gitkeep)
 media/raw/*
+!media/raw/.gitkeep
 media/voice/*
+!media/voice/.gitkeep
 media/final/*
+!media/final/.gitkeep
+media/staged/**/*.mp4
+media/staged/**/*.jpg
+media/temp*
+temp*
+*.m4a
 
+# Keep .gitkeep files
+!.gitkeep
+!media/**/.gitkeep
+!data/**/.gitkeep
+
+# Generated data files (keep directory structure via .gitkeep)
+data/trends/*
+!data/trends/.gitkeep
+data/ideas/*
+!data/ideas/.gitkeep
+data/rejected/*
+!data/rejected/.gitkeep
+data/content_briefs/*
+!data/content_briefs/.gitkeep
+
+# Local databases
 database/*.db
+
+
