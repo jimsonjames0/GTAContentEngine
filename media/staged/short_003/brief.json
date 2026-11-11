@@ -1,0 +1,14 @@
+{
+  "title": "New GTA 6 Artwork",
+  "format": "discovery",
+  "hook": "I just found something interesting: New GTA 6 Artwork.",
+  "script": "I just found something interesting: New GTA 6 Artwork. Take a closer look at New GTA 6 Artwork. Details like this demonstrate the level of density and attention being poured into Vice City. It shows Rockstar's commitment to pushing next-gen immersion further.",
+  "length": 30,
+  "footage": [
+    "news_headline_banner",
+    "social_feed_reactions",
+    "gameplay_cinematic_broll",
+    "community_discussion"
+  ],
+  "voice": "energetic"
+}
