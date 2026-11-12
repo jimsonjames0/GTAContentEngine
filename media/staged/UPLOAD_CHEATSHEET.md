@@ -6,6 +6,7 @@
 ## 🎬 Video Package: `short_002`
 - **Format:** `DISCOVERY`
 - **Status:** `ready_to_publish`
+- **Quality Gate:** `PASSED (100/100)`
 - **Original Title:** Grand Theft Auto VI: Pre-Load Now Trailer
 - **Master Video File:** `media/staged/short_002/master.mp4`
 - **Cover Thumbnail File:** `media/staged/short_002/cover.jpg`
@@ -52,11 +53,19 @@ Thoughts on this? Let us know in the comments!
 ### 4. Spoken Script
 *Look at this GTA VI detail: Grand Theft Auto VI: Pre-Load Now Trailer. Take a closer look at Grand Theft Auto VI: Pre-Load Now Trailer. Details like this demonstrate the level of density and attention being poured into Vice City. It shows Rockstar's commitment to pushing next-gen immersion further.*
 
+### 5. 💰 Monetization & Pinned Comment
+**Copy-Paste Pinned Comment:**
+```text
+Will you be playing GTA VI on Day 1? Drop your thoughts below!
+```
+**Affiliate Category:** `console_storage_expansion`
+
 ---
 
 ## 🎬 Video Package: `short_003`
 - **Format:** `DISCOVERY`
 - **Status:** `ready_to_publish`
+- **Quality Gate:** `PASSED (100/100)`
 - **Original Title:** New GTA 6 Artwork
 - **Master Video File:** `media/staged/short_003/master.mp4`
 - **Cover Thumbnail File:** `media/staged/short_003/cover.jpg`
@@ -102,5 +111,55 @@ Thoughts on this? Let us know in the comments!
 
 ### 4. Spoken Script
 *I just found something interesting: New GTA 6 Artwork. Take a closer look at New GTA 6 Artwork. Details like this demonstrate the level of density and attention being poured into Vice City. It shows Rockstar's commitment to pushing next-gen immersion further.*
+
+### 5. 💰 Monetization & Pinned Comment
+**Copy-Paste Pinned Comment:**
+```text
+Will you be playing GTA VI on Day 1? Drop your thoughts below!
+```
+**Affiliate Category:** `console_storage_expansion`
+
+---
+
+## 🎬 Video Package: `short_test_pass`
+- **Format:** `BREAKDOWN`
+- **Status:** `ready_to_publish`
+- **Quality Gate:** `PASSED (100/100)`
+- **Original Title:** Grand Theft Auto VI: Preload File Sizes and Storage Requirements
+- **Master Video File:** `media/staged/short_test_pass/master.mp4`
+- **Cover Thumbnail File:** `media/staged/short_test_pass/cover.jpg`
+
+### 1. YouTube Shorts
+**Title:**
+```text
+
+```
+**Description:**
+```text
+
+```
+**Tags:** ``
+
+### 2. TikTok
+**Caption:**
+```text
+
+```
+
+### 3. Instagram Reels
+**Caption:**
+```text
+
+```
+
+### 4. Spoken Script
+**
+
+### 5. 💰 Monetization & Pinned Comment
+**Copy-Paste Pinned Comment:**
+```text
+Will you be playing GTA VI on Day 1? Drop your thoughts below!
+```
+**Affiliate Category:** `console_storage_expansion`
 
 ---

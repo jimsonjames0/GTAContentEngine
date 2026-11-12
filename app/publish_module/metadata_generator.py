@@ -88,6 +88,21 @@ class MetadataGenerator:
             f"#GTA6 #GTAVI #RockstarGames #ViceCity #GamingCommunity #Gamer #Reels"
         )
 
+        # 4. Contextual Monetization & Affiliate Pinned Comment
+        topic_lower = f"{title} {hook}".lower()
+        if any(w in topic_lower for w in ["preload", "storage", "download", "size", "gb", "install"]):
+            affiliate_cat = "console_storage_expansion"
+            pinned_cta = "🚨 Preload files are massive—ensure your PS5 / console has at least 150GB ready! Check our top-rated high-speed SSDs in the bio link 👇"
+        elif any(w in topic_lower for w in ["order", "store", "buy", "edition", "playstation"]):
+            affiliate_cat = "preorder_giftcards"
+            pinned_cta = "🎮 Which edition are you getting? Grab official PlayStation & Xbox digital gift cards via the link in our bio for instant delivery 👇"
+        elif any(w in topic_lower for w in ["theory", "leak", "secret"]):
+            affiliate_cat = "gaming_vpn_and_privacy"
+            pinned_cta = "🔒 Protect your network and stay updated on the latest Vice City news. Check our verified community link in the bio 👇"
+        else:
+            affiliate_cat = "gaming_hardware"
+            pinned_cta = "Will you be playing GTA VI on Day 1 on PS5, Xbox, or waiting for PC? Drop your setup below 👇"
+
         metadata = {
             "brief_id": brief_id,
             "original_title": title,
@@ -108,6 +123,12 @@ class MetadataGenerator:
                     "tags": ["GTA6", "GTAVI", "RockstarGames", "ViceCity", "GamingCommunity"],
                 },
             },
+            "monetization": {
+                "recommended_affiliate_category": affiliate_cat,
+                "pinned_comment_cta": pinned_cta,
+                "utm_campaign": f"gtavi_{brief_id}_{fmt.lower()}",
+                "monetization_tier": "affiliate_and_shorts_revshare"
+            }
         }
 
         out_file = self.metadata_dir / f"{brief_id}_metadata.json"

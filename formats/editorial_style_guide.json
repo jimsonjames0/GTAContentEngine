@@ -1,0 +1,29 @@
+{
+  "channel_identity": {
+    "target_audience": "Core GTA and Rockstar Games enthusiasts who want sharp, perceptive analysis of Vice City's mechanics, world design, and verified launch milestones.",
+    "tone": "Knowledgeable insider, observant, concise, grounded, slightly dry wit. Zero hype-screaming or artificial clickbait.",
+    "differentiation": "Connects small visual details or store milestones to how Rockstar actually engineers open worlds, strictly separating confirmed facts from fan theories."
+  },
+  "narrative_rules": {
+    "hook": "Must open with a sharp observation, contrast, or specific anomaly in the first 3 seconds without repeating the raw Reddit post title verbatim.",
+    "body": "Must include at least one concrete mechanic, history parallel (e.g., RDR2 or GTA V), or specific visual detail. Must label community theories explicitly.",
+    "payoff": "Must conclude with a concrete takeaway answering why the detail matters to the player experience."
+  },
+  "banned_phrases": [
+    "Details like this demonstrate the level of density",
+    "pushing next-gen immersion further",
+    "Drop your thoughts below and stay tuned",
+    "I just found something interesting:",
+    "Rockstar hid this in plain sight:",
+    "Look at this GTA VI detail:",
+    "Nobody noticed this:",
+    "Take a closer look at",
+    "trailer..",
+    "This shifts how fans are viewing the current timeline"
+  ],
+  "rejected_content_types": [
+    "unverified 4chan leaks presented as fact",
+    "clickbait release date countdowns",
+    "verbatim reading of Reddit user comments"
+  ]
+}

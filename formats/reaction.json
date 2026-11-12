@@ -8,11 +8,27 @@
     "commentary"
   ],
   "hook_styles": [
-    "My reaction to this GTA VI moment...",
-    "This part caught me off guard...",
-    "I didn’t expect this...",
-    "This is actually insane..."
+    "This GTA VI moment caught me off guard.",
+    "The trailer detail I did not expect.",
+    "Vice City anomaly worth discussing.",
+    "This part changes the launch conversation.",
+    "Community reaction to this detail is intense.",
+    "This anomaly deserves closer scrutiny."
   ],
+  "persona": {
+    "name": "Commentator",
+    "voice_profile": {
+      "tone": "energetic commentary",
+      "pace": "medium_fast",
+      "energy": "high",
+      "notes": "Showcase the funny/insane clip and give direct commentary."
+    },
+    "neural_voice": {
+      "voice": "en-US-GuyNeural",
+      "rate": "+12%",
+      "pitch": "+2Hz"
+    }
+  },
   "editing_style": {
     "pace": "medium_fast",
     "caption_style": "reaction_style",

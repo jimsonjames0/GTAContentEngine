@@ -1,0 +1,236 @@
+{
+  "version": "1.0",
+  "catalog_name": "GTA VI Visual Asset Catalog",
+  "categories": [
+    "milestone",
+    "website",
+    "gameplay",
+    "general"
+  ],
+  "assets": {
+    "store_preload_screen": {
+      "tag": "store_preload_screen",
+      "category": "milestone",
+      "file_path": "media/raw/store_preload_screen.mp4",
+      "theme_color_rgb": [
+        24,
+        38,
+        64
+      ],
+      "recommended_motion": "zoom_in",
+      "zoom_intensity": 1.08,
+      "pacing_weight": 0.2,
+      "min_duration_sec": 3.0
+    },
+    "download_queue_dashboard": {
+      "tag": "download_queue_dashboard",
+      "category": "milestone",
+      "file_path": "media/raw/download_queue_dashboard.mp4",
+      "theme_color_rgb": [
+        18,
+        52,
+        70
+      ],
+      "recommended_motion": "steady",
+      "zoom_intensity": 1.0,
+      "pacing_weight": 0.3,
+      "min_duration_sec": 4.0
+    },
+    "file_size_graphic": {
+      "tag": "file_size_graphic",
+      "category": "milestone",
+      "file_path": "media/raw/file_size_graphic.mp4",
+      "theme_color_rgb": [
+        40,
+        30,
+        60
+      ],
+      "recommended_motion": "zoom_out",
+      "zoom_intensity": 1.05,
+      "pacing_weight": 0.3,
+      "min_duration_sec": 4.0
+    },
+    "community_reaction_thread": {
+      "tag": "community_reaction_thread",
+      "category": "milestone",
+      "file_path": "media/raw/community_reaction_thread.mp4",
+      "theme_color_rgb": [
+        55,
+        30,
+        45
+      ],
+      "recommended_motion": "pan_vertical",
+      "zoom_intensity": 1.04,
+      "pacing_weight": 0.2,
+      "min_duration_sec": 3.0
+    },
+    "rockstar_site_capture": {
+      "tag": "rockstar_site_capture",
+      "category": "website",
+      "file_path": "media/raw/rockstar_site_capture.mp4",
+      "theme_color_rgb": [
+        60,
+        48,
+        16
+      ],
+      "recommended_motion": "zoom_in",
+      "zoom_intensity": 1.06,
+      "pacing_weight": 0.2,
+      "min_duration_sec": 3.0
+    },
+    "url_redirect_inspect": {
+      "tag": "url_redirect_inspect",
+      "category": "website",
+      "file_path": "media/raw/url_redirect_inspect.mp4",
+      "theme_color_rgb": [
+        20,
+        50,
+        40
+      ],
+      "recommended_motion": "steady",
+      "zoom_intensity": 1.0,
+      "pacing_weight": 0.3,
+      "min_duration_sec": 4.0
+    },
+    "archive_comparison": {
+      "tag": "archive_comparison",
+      "category": "website",
+      "file_path": "media/raw/archive_comparison.mp4",
+      "theme_color_rgb": [
+        45,
+        35,
+        55
+      ],
+      "recommended_motion": "zoom_out",
+      "zoom_intensity": 1.05,
+      "pacing_weight": 0.3,
+      "min_duration_sec": 4.0
+    },
+    "vice_city_promo_art": {
+      "tag": "vice_city_promo_art",
+      "category": "website",
+      "file_path": "media/raw/vice_city_promo_art.mp4",
+      "theme_color_rgb": [
+        70,
+        25,
+        45
+      ],
+      "recommended_motion": "zoom_in",
+      "zoom_intensity": 1.1,
+      "pacing_weight": 0.2,
+      "min_duration_sec": 3.0
+    },
+    "trailer_cinematic_intro": {
+      "tag": "trailer_cinematic_intro",
+      "category": "gameplay",
+      "file_path": "media/raw/trailer_cinematic_intro.mp4",
+      "theme_color_rgb": [
+        15,
+        45,
+        65
+      ],
+      "recommended_motion": "zoom_in",
+      "zoom_intensity": 1.08,
+      "pacing_weight": 0.18,
+      "min_duration_sec": 3.0
+    },
+    "trailer_frame_zoom": {
+      "tag": "trailer_frame_zoom",
+      "category": "gameplay",
+      "file_path": "media/raw/trailer_frame_zoom.mp4",
+      "theme_color_rgb": [
+        20,
+        35,
+        55
+      ],
+      "recommended_motion": "zoom_in",
+      "zoom_intensity": 1.12,
+      "pacing_weight": 0.32,
+      "min_duration_sec": 4.0
+    },
+    "slow_mo_physics_check": {
+      "tag": "slow_mo_physics_check",
+      "category": "gameplay",
+      "file_path": "media/raw/slow_mo_physics_check.mp4",
+      "theme_color_rgb": [
+        25,
+        40,
+        50
+      ],
+      "recommended_motion": "steady",
+      "zoom_intensity": 1.0,
+      "pacing_weight": 0.3,
+      "min_duration_sec": 4.0
+    },
+    "side_by_side_comparison": {
+      "tag": "side_by_side_comparison",
+      "category": "gameplay",
+      "file_path": "media/raw/side_by_side_comparison.mp4",
+      "theme_color_rgb": [
+        35,
+        30,
+        45
+      ],
+      "recommended_motion": "zoom_out",
+      "zoom_intensity": 1.05,
+      "pacing_weight": 0.2,
+      "min_duration_sec": 3.0
+    },
+    "news_headline_banner": {
+      "tag": "news_headline_banner",
+      "category": "general",
+      "file_path": "media/raw/news_headline_banner.mp4",
+      "theme_color_rgb": [
+        40,
+        20,
+        30
+      ],
+      "recommended_motion": "zoom_in",
+      "zoom_intensity": 1.06,
+      "pacing_weight": 0.18,
+      "min_duration_sec": 3.0
+    },
+    "social_feed_reactions": {
+      "tag": "social_feed_reactions",
+      "category": "general",
+      "file_path": "media/raw/social_feed_reactions.mp4",
+      "theme_color_rgb": [
+        20,
+        45,
+        50
+      ],
+      "recommended_motion": "pan_vertical",
+      "zoom_intensity": 1.04,
+      "pacing_weight": 0.32,
+      "min_duration_sec": 4.0
+    },
+    "gameplay_cinematic_broll": {
+      "tag": "gameplay_cinematic_broll",
+      "category": "general",
+      "file_path": "media/raw/gameplay_cinematic_broll.mp4",
+      "theme_color_rgb": [
+        50,
+        25,
+        55
+      ],
+      "recommended_motion": "zoom_in",
+      "zoom_intensity": 1.08,
+      "pacing_weight": 0.3,
+      "min_duration_sec": 4.0
+    },
+    "community_discussion": {
+      "tag": "community_discussion",
+      "category": "general",
+      "file_path": "media/raw/community_discussion.mp4",
+      "theme_color_rgb": [
+        30,
+        40,
+        50
+      ],
+      "recommended_motion": "steady",
+      "zoom_intensity": 1.0,
+      "pacing_weight": 0.2,
+      "min_duration_sec": 3.0
+    }
+  }
+}

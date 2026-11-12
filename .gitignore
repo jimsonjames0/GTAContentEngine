@@ -20,6 +20,7 @@ media/final/*
 !media/final/.gitkeep
 media/staged/**/*.mp4
 media/staged/**/*.jpg
+media/staged_backup*
 media/temp*
 temp*
 *.m4a

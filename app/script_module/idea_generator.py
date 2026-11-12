@@ -10,14 +10,9 @@ class IdeaGenerator:
 
     def _generate_hook(self, trend_title: str, format_data: dict) -> str:
         hook_templates = format_data.get("hook_styles", [])
-        
         if hook_templates:
-            base_hook = random.choice(hook_templates)
-        else:
-            base_hook = "Look at this GTA VI detail..."
-        # Strip trailing ellipsis if present and pair with trend title
-        clean_hook = base_hook.rstrip(". ")
-        return f"{clean_hook}: {trend_title}."
+            return random.choice(hook_templates)
+        return "This GTA VI detail deserves closer attention."
 
     def _generate_concept(self, trend_title: str, format_data: dict) -> str:
         fmt_name = format_data.get("name", "discovery")

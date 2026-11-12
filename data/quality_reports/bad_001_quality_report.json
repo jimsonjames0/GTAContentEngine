@@ -1,0 +1,44 @@
+{
+  "short_id": "bad_001",
+  "passed": false,
+  "total_score": 80,
+  "max_score": 100,
+  "critical_passed": false,
+  "checks": {
+    "editorial_review": {
+      "score": 5,
+      "max_score": 25,
+      "passed": false,
+      "notes": [
+        "Contains banned phrase: Drop your thoughts below and stay tuned",
+        "Contains banned phrase: Nobody noticed this:",
+        "Word count 16 outside 50-100 range",
+        "Missing verified_claims or source_references"
+      ]
+    },
+    "video_technical": {
+      "score": 25,
+      "max_score": 25,
+      "passed": true,
+      "notes": [
+        "Resolution 1080x1920 verified, duration 30.9s within bounds."
+      ]
+    },
+    "audio_master": {
+      "score": 25,
+      "max_score": 25,
+      "passed": true,
+      "notes": [
+        "Audio track present and synchronized with video duration."
+      ]
+    },
+    "captions_and_metadata": {
+      "score": 25,
+      "max_score": 25,
+      "passed": true,
+      "notes": [
+        "Caption timeline synchronized and platforms populated."
+      ]
+    }
+  }
+}

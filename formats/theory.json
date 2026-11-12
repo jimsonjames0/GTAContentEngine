@@ -8,11 +8,27 @@
     "question"
   ],
   "hook_styles": [
-    "I think Rockstar just revealed something huge...",
-    "This GTA VI detail might change everything...",
-    "Hear me out...",
-    "What if this means something bigger?"
+    "This visual anomaly points to an intentional Rockstar placement.",
+    "A specific environmental clue suggests unseen Vice City locations.",
+    "Community dissected detail signals Rockstar-level world-building.",
+    "Visual patterns in trailer frames mirror prior Rockstar titles.",
+    "This anomaly may connect to broader Grand Theft Auto legacy.",
+    "Frame composition hints at unannounced mission mechanics."
   ],
+  "persona": {
+    "name": "Investigator",
+    "voice_profile": {
+      "tone": "grounded, investigative",
+      "pace": "medium",
+      "energy": "curious",
+      "notes": "Connects clues and labels theories explicitly."
+    },
+    "neural_voice": {
+      "voice": "en-US-EricNeural",
+      "rate": "+5%",
+      "pitch": "-3Hz"
+    }
+  },
   "editing_style": {
     "pace": "medium",
     "caption_style": "clean_emphasized",

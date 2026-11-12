@@ -8,11 +8,27 @@
     "impact"
   ],
   "hook_styles": [
-    "Nobody is talking about this...",
-    "Look at this GTA VI detail...",
-    "I just found something interesting...",
-    "This small detail actually matters..."
+    "A single trailer frame reveals more than most teasers show.",
+    "Frame analysis exposes deliberate world-building choices.",
+    "One environmental detail changes how you'll read Vice City.",
+    "Trailer composition signals Rockstar's engineering intent.",
+    "This small visual detail matters more than the headline.",
+    "Trailer frames contain concrete Vice City mechanics."
   ],
+  "persona": {
+    "name": "Investigator",
+    "voice_profile": {
+      "tone": "observant, crisp",
+      "pace": "brisk",
+      "energy": "curious",
+      "notes": "Sharp, perceptive analysis of GTA VI details."
+    },
+    "neural_voice": {
+      "voice": "en-US-GuyNeural",
+      "rate": "+10%",
+      "pitch": "+0Hz"
+    }
+  },
   "editing_style": {
     "pace": "fast",
     "caption_style": "highlighted",

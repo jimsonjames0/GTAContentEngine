@@ -113,10 +113,24 @@ class PerformanceTracker:
 
         self._save_json(self.weights_file, weights)
 
+    def get_monetization_metrics(self) -> Dict[str, float]:
+        """Calculate estimated revenue from Shorts RPM and affiliate conversions."""
+        logs = self._load_json(self.log_file, [])
+        total_views = sum(item.get("views", 0) for item in logs)
+        ad_rev = round(total_views * 0.00012, 2)  # $0.12 RPM
+        aff_rev = round(total_views * 0.00035, 2)  # Affiliate conversion estimate
+        return {
+            "total_views": total_views,
+            "estimated_shorts_ad_revenue_usd": ad_rev,
+            "estimated_affiliate_revenue_usd": aff_rev,
+            "total_estimated_earnings_usd": round(ad_rev + aff_rev, 2)
+        }
+
     def get_report(self) -> str:
-        """Print and return a formatted terminal analytics summary."""
+        """Print and return a formatted terminal analytics summary with monetization metrics."""
         logs = self._load_json(self.log_file, [])
         weights = self._load_json(self.weights_file, {})
+        monetization = self.get_monetization_metrics()
 
         total_videos = len(logs)
         total_views = sum(item.get("views", 0) for item in logs)
@@ -124,11 +138,14 @@ class PerformanceTracker:
 
         lines = [
             "=" * 76,
-            "              GTA VI CONTENT ENGINE — PERFORMANCE REPORT",
+            "              GTA VI CONTENT ENGINE — PERFORMANCE & REVENUE REPORT",
             "=" * 76,
             f"Total Videos Tracked: {total_videos}",
             f"Total Views:          {total_views:,}",
             f"Total Likes:          {total_likes:,}",
+            f"Estimated Shorts Ad Rev ($0.12 RPM): ${monetization['estimated_shorts_ad_revenue_usd']:,.2f}",
+            f"Estimated Affiliate Conversions:    ${monetization['estimated_affiliate_revenue_usd']:,.2f}",
+            f"Total Estimated Revenue:            ${monetization['total_estimated_earnings_usd']:,.2f}",
             "-" * 76,
             f"{'FORMAT':<16} {'VIDEOS':<8} {'AVG VIEWS':<14} {'AVG LIKES':<12} {'ENGAGEMENT'}",
             "-" * 76,

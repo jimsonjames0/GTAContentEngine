@@ -6,11 +6,27 @@
     "punchline"
   ],
   "hook_styles": [
-    "Bro what is Jason doing...",
-    "Lucia would never let this happen...",
-    "GTA VI players be like...",
-    "This is so GTA VI coded..."
+    "Jason does something Lucia would never let slide.",
+    "Vice City players be like... exactly this.",
+    "GTA VI coded this exact moment.",
+    "The most GTA VI thing I've ever seen.",
+    "Players caught this Vice City detail first.",
+    "This small Vice City quirk says everything."
   ],
+  "persona": {
+    "name": "Commentator",
+    "voice_profile": {
+      "tone": "fast, punchy deadpan",
+      "pace": "very_fast",
+      "energy": "high",
+      "notes": "Quick setup leading into punchline timing."
+    },
+    "neural_voice": {
+      "voice": "en-US-RogerNeural",
+      "rate": "+15%",
+      "pitch": "+2Hz"
+    }
+  },
   "editing_style": {
     "pace": "very_fast",
     "caption_style": "comic",

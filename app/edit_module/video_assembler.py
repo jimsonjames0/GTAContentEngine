@@ -23,8 +23,8 @@ class VideoAssembler:
         # 2. Generate voiceover and get duration
         voice_path, audio_duration = self.voice_generator.generate(brief_filename=brief_filename)
 
-        # 3. Generate cut sheet
-        cut_sheet = self.cut_generator.generate(brief_filename=brief_filename)
+        # 3. Generate cut sheet timed to voice duration
+        cut_sheet = self.cut_generator.generate(brief_filename=brief_filename, target_duration=audio_duration)
         timeline = cut_sheet["timeline"]
 
         clips = []

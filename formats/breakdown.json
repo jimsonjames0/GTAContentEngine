@@ -8,11 +8,27 @@
 		"payoff"
 	],
 	"hook_styles": [
-		"Nobody noticed this...",
-		"Look closely at this...",
-		"Rockstar hid this in plain sight...",
-		"This GTA VI detail is actually huge..."
+		"Preload packages have hit backend stores ahead of launch.",
+		"Store-side preload infrastructure is the final countdown signal.",
+		"Backend distribution stores just moved launch data live.",
+		"Preload staging means Rockstar is unlocking servers soon.",
+		"Digital storefronts already have GTA VI preload packages.",
+		"Store preload files appeared days before official announcement."
 	],
+	"persona": {
+		"name": "Analyst",
+		"voice_profile": {
+			"tone": "analytical, authoritative insider",
+			"pace": "steady",
+			"energy": "measured",
+			"notes": "Knowledgeable insider, observant, concise. Zero hype."
+		},
+		"neural_voice": {
+			"voice": "en-US-ChristopherNeural",
+			"rate": "+8%",
+			"pitch": "-2Hz"
+		}
+	},
 	"editing_style": {
 		"pace": "fast",
 		"caption_style": "bold_emphasized",

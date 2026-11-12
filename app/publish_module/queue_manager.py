@@ -43,9 +43,10 @@ class QueueManager:
         short_id: str,
         brief: Dict[str, Any],
         metadata: Optional[Dict[str, Any]] = None,
-        staged_dir: Optional[str] = None
+        staged_dir: Optional[str] = None,
+        quality_report: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
-        """Add or update an item in the publishing queue."""
+        """Add or update an item in the publishing queue with Quality Gate audit results."""
         queue = self._load_queue()
         now_iso = datetime.now(timezone.utc).isoformat()
 
@@ -60,6 +61,11 @@ class QueueManager:
         if staged_dir is None:
             staged_dir = f"media/staged/{short_id}"
 
+        # Evaluate quality gate outcome
+        q_score = quality_report.get("total_score", 100) if quality_report else 100
+        q_passed = quality_report.get("passed", True) if quality_report else True
+        status = "ready_to_publish" if q_passed else "held_by_quality_gate"
+
         # Find existing item if present
         existing_item = None
         for item in queue:
@@ -71,7 +77,9 @@ class QueueManager:
             existing_item["title"] = title
             existing_item["format"] = fmt
             existing_item["staged_dir"] = staged_dir
-            existing_item["status"] = "ready_to_publish"
+            existing_item["status"] = status
+            existing_item["quality_score"] = q_score
+            existing_item["quality_passed"] = q_passed
             entry = existing_item
         else:
             entry = {
@@ -80,7 +88,9 @@ class QueueManager:
                 "format": fmt,
                 "title": title,
                 "staged_dir": staged_dir,
-                "status": "ready_to_publish",
+                "status": status,
+                "quality_score": q_score,
+                "quality_passed": q_passed,
                 "published_at": None,
                 "platforms": {
                     "youtube": {"status": "pending"},
@@ -139,26 +149,28 @@ class QueueManager:
 
     def print_queue_table(self):
         queue = self.list_all()
-        print("=" * 88)
+        print("=" * 96)
         print("                           PUBLISHING QUEUE REGISTRY")
-        print("=" * 88)
+        print("=" * 96)
         if not queue:
             print("  Queue is currently empty.")
-            print("=" * 88)
+            print("=" * 96)
             return
 
-        print(f"{'ID':<11} {'FORMAT':<12} {'STATUS':<18} {'STAGED DIRECTORY':<25} {'TITLE'}")
-        print("-" * 88)
+        print(f"{'ID':<11} {'FORMAT':<12} {'STATUS':<20} {'QUALITY':<9} {'STAGED DIR':<22} {'TITLE'}")
+        print("-" * 96)
         for item in queue:
             sid = item.get("id", "")
             fmt = item.get("format", "")[:10]
-            status = item.get("status", "")[:16]
-            staged = item.get("staged_dir", "")[:23]
+            status = item.get("status", "")[:18]
+            q_score = item.get("quality_score", 100)
+            q_str = f"{q_score}/100"
+            staged = item.get("staged_dir", "")[:20]
             title = item.get("title", "")
-            if len(title) > 28:
-                title = title[:25] + "..."
-            print(f"{sid:<11} {fmt:<12} {status:<18} {staged:<25} {title}")
-        print("=" * 88)
+            if len(title) > 22:
+                title = title[:19] + "..."
+            print(f"{sid:<11} {fmt:<12} {status:<20} {q_str:<9} {staged:<22} {title}")
+        print("=" * 96)
 
     def generate_copy_sheet(self) -> Path:
         """Generate media/staged/UPLOAD_CHEATSHEET.md for all ready items."""
@@ -205,11 +217,18 @@ class QueueManager:
                 yt = platforms.get("youtube_shorts", {})
                 tt = platforms.get("tiktok", {})
                 ig = platforms.get("instagram_reels", {})
+                monetization = metadata.get("monetization", {})
+                pinned_cta = monetization.get("pinned_comment_cta", "Will you be playing GTA VI on Day 1? Drop your thoughts below!")
+                affiliate_cat = monetization.get("recommended_affiliate_category", "console_storage_expansion")
+
+                q_score = item.get("quality_score", 100)
+                q_status = "PASSED" if item.get("quality_passed", True) else "HELD"
 
                 lines.extend([
                     f"## 🎬 Video Package: `{short_id}`",
                     f"- **Format:** `{item.get('format', 'UNKNOWN')}`",
                     f"- **Status:** `{item.get('status', 'ready_to_publish')}`",
+                    f"- **Quality Gate:** `{q_status} ({q_score}/100)`",
                     f"- **Original Title:** {item.get('title', '')}",
                     f"- **Master Video File:** `{item.get('staged_dir', '')}/master.mp4`",
                     f"- **Cover Thumbnail File:** `{item.get('staged_dir', '')}/cover.jpg`",
@@ -239,6 +258,13 @@ class QueueManager:
                     "",
                     "### 4. Spoken Script",
                     f"*{brief.get('script', '')}*",
+                    "",
+                    "### 5. 💰 Monetization & Pinned Comment",
+                    "**Copy-Paste Pinned Comment:**",
+                    "```text",
+                    f"{pinned_cta}",
+                    "```",
+                    f"**Affiliate Category:** `{affiliate_cat}`",
                     "",
                     "---",
                     ""

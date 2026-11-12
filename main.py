@@ -31,6 +31,7 @@ from edit_module.render_engine import RenderEngine
 from publish_module.metadata_generator import MetadataGenerator
 from publish_module.cover_extractor import CoverExtractor
 from publish_module.queue_manager import QueueManager
+from publish_module.quality_gate import QualityGate
 from analytics_module.performance_tracker import PerformanceTracker
 from batch_runner import BatchRunner
 
@@ -133,11 +134,35 @@ def run_single_pipeline(force: bool = False):
     shutil.copy2(metadata_file, package_dir / "metadata.json")
     shutil.copy2(brief_file, package_dir / "brief.json")
 
-    queue_mgr.register(short_id=short_id, brief=brief, metadata=metadata, staged_dir=str(package_dir.relative_to(ROOT_DIR)))
+    print(f"\n[Quality Gate] Auditing master video package for {short_id}...")
+    quality_gate = QualityGate()
+    q_report = quality_gate.evaluate(
+        short_id=short_id,
+        brief_path=brief_file,
+        video_path=master_path,
+        metadata_path=metadata_file
+    )
+    q_score = q_report.get("total_score", 0)
+    q_passed = q_report.get("passed", False)
+    status_icon = "✓" if q_passed else "✗"
+    print(f"  {status_icon} Quality Gate Score: {q_score}/100 | Passed: {q_passed}")
+
+    report_file = ROOT_DIR / "data" / "quality_reports" / f"{short_id}_quality_report.json"
+    if report_file.exists():
+        shutil.copy2(report_file, package_dir / "quality_report.json")
+
+    queue_mgr.register(
+        short_id=short_id,
+        brief=brief,
+        metadata=metadata,
+        staged_dir=str(package_dir.relative_to(ROOT_DIR)),
+        quality_report=q_report
+    )
     queue_mgr.generate_copy_sheet()
 
     print(f"  ✓ Staged package verified -> {package_dir.relative_to(ROOT_DIR)}/")
-    print(f"  ✓ Registered in publishing queue -> status: ready_to_publish")
+    reg_status = "ready_to_publish" if q_passed else "held_by_quality_gate"
+    print(f"  ✓ Registered in publishing queue -> status: {reg_status} ({q_score}/100)")
     print("  ✓ Cheatsheet updated: media/staged/UPLOAD_CHEATSHEET.md")
 
     print("\n" + "=" * 64)
